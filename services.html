@@ -91,12 +91,7 @@
 						</li>
 						<li class="has-dropdown">
 							<a href="gallery.html">Gallery</a>
-							<ul class="dropdown">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
+							
 						</li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
@@ -199,12 +194,19 @@
 
 				</div>
 
-				<div class="col-md-6 animate-box">
-					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
-						<a  href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a>
-						<div class="overlay"></div>
-					</div>
-				</div>
+				<div style="text-align:center"> 
+					<button onclick="playPause()">Play/Pause</button> 
+					<button onclick="makeBig()">Big</button>
+					<button onclick="makeSmall()">Small</button>
+					<button onclick="makeNormal()">Normal</button>
+					<br><br>
+					<video id="video1" width="420">
+					  <source src="video/IMG_2131.MOV" type="video/mp4">
+					  <source src="video/IMG_2131.MOV" type="video/ogg">
+					  Your browser does not support HTML video.
+					</video>
+				  </div>
+				
 			</div>
 
 			
@@ -271,6 +273,31 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+
+	<!-- script video -->
+	<script> 
+		var myVideo = document.getElementById("video1"); 
+		
+		function playPause() { 
+		  if (myVideo.paused) 
+			myVideo.play(); 
+		  else 
+			myVideo.pause(); 
+		} 
+		
+		function makeBig() { 
+			myVideo.width = 560; 
+		} 
+		
+		function makeSmall() { 
+			myVideo.width = 320; 
+		} 
+		
+		function makeNormal() { 
+			myVideo.width = 420; 
+		} 
+		</script> 
+	<!-- end script video -->
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
